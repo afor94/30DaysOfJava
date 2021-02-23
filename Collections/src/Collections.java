@@ -3,15 +3,17 @@ import java.util.Set;
 
 public class Collections {
     public static void main(String[] args) {
-        HashMap<String, Integer> ids = new HashMap<>();
-        ids.put("Alec Fortin", 5);
-        ids.put("Bean Louise", 1);
+        Person p = new Person("email@email.com", "Fortin");
+        Person q = new Person("email@email.com", "Fortin");
+        Position pos1 = new Position(10,10);
+        p.position = pos1;
+        Position pos2 = new Position(10,10);
+        q.position = pos2;
 
-        Set<String> keys = ids.keySet();
-        for(String key : keys) {
-            System.out.println(key);
-            System.out.println(ids.get(key));
-        }
+        System.out.println(p.equals(q));
+        System.out.println(q.hashCode());
+        System.out.println(p.hashCode());
+
 
     }
 }
