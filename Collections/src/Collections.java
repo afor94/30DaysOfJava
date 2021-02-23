@@ -1,12 +1,10 @@
 
 public class Collections {
     public static void main(String[] args) {
-        Item<String> item = new Item<>();
-        item.setX("hello");
-
-        Item<Person> person = new Item<>();
+        Pair<Person, Person> person = new Pair<>();
         Person p = new Person("email@email.com", "hello");
         person.setX(p);
+        person.setY(p);
 
         Person p2 = person.getX();
     }
